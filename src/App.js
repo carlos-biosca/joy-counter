@@ -24,18 +24,11 @@ const Menu = styled.nav`
   background-color: ${({ theme }) => theme.greycolor};
   text-align: center;
 
-  & h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 4rem 0;
-    padding: 6px;
-  }
-
   & div{
     width: 168px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 195px auto 0;
 
     & a{
       background-color: ${({ theme }) => theme.whitecolor};
@@ -44,8 +37,8 @@ const Menu = styled.nav`
       padding: 15px;
       font-weight: bold;
       text-decoration: none;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-      
       &.selected{
         background-color: ${({ theme }) => theme.blackcolor};
         color: ${({ theme }) => theme.whitecolor};
@@ -70,7 +63,6 @@ export default function App () {
 
         <ThemeProvider theme={colors}>
           <Menu>
-            <h1>Menu</h1>
             <div>
               <NavLink exact activeClassName="selected" to="/">Home</NavLink>
               <NavLink activeClassName="selected" to="/info">Info</NavLink>
