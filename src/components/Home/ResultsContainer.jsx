@@ -1,43 +1,10 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
+
 import { ActivityContext } from "../../context/Activity.context";
 
 import StatsEffect from "./StatsEffect";
-import ContainerGrid from "../styled/ContainerGrid";
-
-const StatsContainer = styled(ContainerGrid)`
-  height: 324px;
-`;
-
-const Result = styled.section`
-  color: ${({ theme }) => theme.whitecolor};
-  text-align: left;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-
-  & h2 {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 48px;
-  }
-
-  & p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 100px;
-    background: linear-gradient(
-      to top,
-      ${({ theme }) => theme.yellowcolor} 0%,
-      ${({ theme }) => theme.yellowcolor} ${({ result }) => result * 0.75}%,
-      ${({ theme }) => theme.purplecolor} ${({ result }) => result}%,
-      ${({ theme }) => theme.purplecolor} 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`;
+import { StatsContainer } from "../styled/ContainerGrid";
+import { ResultHome } from "../styled/Result";
 
 const ResultsContainer = () => {
   const [activities] = useContext(ActivityContext);
@@ -105,10 +72,10 @@ const ResultsContainer = () => {
           medium={negativeMedium}
         />
       </div>
-      <Result result={result}>
-        <h2>Alegría</h2>
-        <p>{result}%</p>
-      </Result>
+      <ResultHome result={result}>
+        <h3>Alegría</h3>
+        <span>{result}%</span>
+      </ResultHome>
     </StatsContainer>
   );
 };

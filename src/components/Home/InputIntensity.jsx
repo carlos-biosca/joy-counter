@@ -1,26 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 
 import Title from "../styled/Title";
-import InputRadio from "../styled/InputRadio";
-import InputLabel from "../styled/InputLabel";
-import InputContainer from "../styled/InputContainer";
-
-const ContainerIntensity = styled(InputContainer)`
-  margin-bottom: 62px;
-
-  & div {
-    display: flex;
-    justify-content: space-between;
-  }
-`;
-
-const LabelIntensity = styled(InputLabel)`
-  width: 40px;
-  height: 46px;
-  font-weight: bold;
-  line-height: 49px;
-`;
+import { InputRadio } from "../styled/Inputs";
+import { LabelIntensity } from "../styled/Labels";
+import { ContainerIntensity } from "../styled/Inputs";
 
 const InputIntensity = ({ intensity, handleIntensity }) => {
   return (

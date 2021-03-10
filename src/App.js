@@ -64,7 +64,7 @@ export default function App () {
         <ThemeProvider theme={colors}>
           <Menu>
             <div>
-              <NavLink exact activeClassName="selected" to="/">Home</NavLink>
+              <NavLink exact activeClassName="selected" to="/">Inicio</NavLink>
               <NavLink activeClassName="selected" to="/info">Info</NavLink>
               <NavLink activeClassName="selected" to="/demo">Demo</NavLink>
             </div>

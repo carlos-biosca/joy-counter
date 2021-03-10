@@ -7,4 +7,16 @@ const ContainerGrid = styled.div`
   grid-template-columns: repeat(2, 350px);
 `;
 
-export default ContainerGrid;
+const ListsContainer = styled(ContainerGrid)`
+  height: 600px;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+`;
+
+const StatsContainer = styled(ContainerGrid)`
+  height: 324px;
+`;
+
+export { ContainerGrid, ListsContainer, StatsContainer };

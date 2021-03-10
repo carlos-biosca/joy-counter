@@ -1,31 +1,9 @@
 import React from "react";
-import styled from "styled-components";
 
 import Title from "../styled/Title";
-import InputRadio from "../styled/InputRadio";
-import InputLabel from "../styled/InputLabel";
-import InputContainer from "../styled/InputContainer";
-
-const ContainerEffect = styled(InputContainer)`
-  margin-bottom: 13px;
-`;
-
-const LabelEffect = styled(InputLabel)`
-  display: inline-block;
-  width: 150px;
-  height: 59px;
-  line-height: 58px;
-  outline: none;
-
-  &.positivo {
-    margin-right: 13px;
-    border-radius: 10px 0px 0px 10px;
-  }
-
-  &.negativo {
-    border-radius: 0px 10px 10px 0px;
-  }
-`;
+import { InputRadio } from "../styled/Inputs";
+import { LabelEffect } from "../styled/Labels";
+import { ContainerEffect } from "../styled/Inputs";
 
 const InputEffect = ({ handleEffect }) => {
   return (
