@@ -57,8 +57,7 @@ const Info = () => {
             nosotros.
             <br />
             <br />
-            Recuerda cuando eras niño, recuerda lo que necesitabas, y descubre
-            lo que no necesitas.
+            Descubre lo que no necesitas.
           </p>
         </HeaderInfo>
 

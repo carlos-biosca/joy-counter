@@ -38,7 +38,7 @@ const InstrutionsGrid = () => {
       <article>
         <ContainerActivity>
           <Title>Nombre actividad</Title>
-          <input type="text" disabled />
+          <input type="text" />
         </ContainerActivity>
         <p>Introduce una actividad que realices a diario o frecuentemente.</p>
       </article>

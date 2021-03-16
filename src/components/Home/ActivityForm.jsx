@@ -39,7 +39,7 @@ const ActivityForm = () => {
       formIsValid = false;
       setError("*Introduce una actividad");
     }
-    if (name !== "" && !name.match(/^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/)) {
+    if (name !== "" && !name.match(/^[a-zA-ZÀ-ÖØ-öø-ÿ\s]+$/)) {
       formIsValid = false;
       setError("*Introduce solo letras");
     }
