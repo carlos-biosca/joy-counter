@@ -8,6 +8,7 @@ const ContainerGrid = styled.div`
 `;
 
 const ListsContainer = styled(ContainerGrid)`
+  font-family: 'Inconsolata', monospace;
   height: 600px;
   overflow: scroll;
   ::-webkit-scrollbar {
@@ -16,6 +17,7 @@ const ListsContainer = styled(ContainerGrid)`
 `;
 
 const StatsContainer = styled(ContainerGrid)`
+  font-family: 'Inconsolata', monospace;
   height: 324px;
 `;
 

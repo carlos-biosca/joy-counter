@@ -3,33 +3,21 @@ import styled from 'styled-components';
 const Result = styled.section`
   color: ${({ theme }) => theme.whitecolor};
   text-align: center;
-  font-weight: bold;
-  margin: 50px auto;
-
-  & h3 {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-    font-size: 48px;
-  }
+  font-weight: 700;
+  margin: 20px auto;
 
   & span {
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 100px;
+    font-size: 140px;
   }
 `;
 
 const ResultHome = styled(Result)`
-  text-align: left;
-  margin: 0 auto;
-
-  & h3 {
-    margin-bottom: 1rem;
-  }
 
   & span {
     background: linear-gradient(
-      to top,
+      to bottom,
       ${({ theme }) => theme.yellowcolor} 0%,
       ${({ theme }) => theme.yellowcolor} ${({ result }) => result * 0.9}%,
       ${({ theme }) => theme.purplecolor} ${({ result }) => result}%,

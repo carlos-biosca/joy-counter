@@ -73,7 +73,6 @@ const ResultsContainer = () => {
         />
       </div>
       <ResultHome result={result}>
-        <h3>Alegría</h3>
         <span>{result}%</span>
       </ResultHome>
     </StatsContainer>

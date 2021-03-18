@@ -14,8 +14,7 @@ import ActivityLists from "../components/Home/ActivityLists";
 const HeaderDemo = styled(Header)`
   & p {
     text-align: left;
-    font-size: 21px;
-    padding: 0 2rem 2rem;
+    padding: 0 2rem 3rem;
   }
 `;
 

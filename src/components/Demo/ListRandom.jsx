@@ -5,22 +5,26 @@ import { ActivityContext } from "../../context/Activity.context";
 import { SubmitButton } from "../styled/Buttons";
 
 const ListRandom = () => {
-  const [activities, setActivities] = useContext(ActivityContext);
+  const [activities, setActivities] = useContext(ActivityContext); // eslint-disable-line
   const [words] = useState([
     "dieta",
     "dormir",
     "actividad física",
     "estrés",
     "leer libros",
-    "vida social",
+    "contacto social",
     "trabajo",
     "preocupaciones",
     "fumar",
-    "la soledad",
+    "pasar tiempo solo",
     "beber alcohol",
     "planear el futuro",
     "ver la televisión",
-    "ducharse"
+    "ducharse",
+    "compararse con los demás",
+    "pensar en el pasado",
+    "querer agradar",
+    "ir a la playa"
   ]);
 
   const handleCreateList = () => {
@@ -41,17 +45,17 @@ const ListRandom = () => {
     <>
       <h1>Demo</h1>
       <p>
-        Dependiendo de tu estado de ánimo quizás te resulte difícil hacer una
+        Dependiendo de tu estado de ánimo quizás te resulta difícil hacer una
         lista ahora mismo de todas tus actividades. Puede ser que te cueste
         llenar uno de los dos lados. Para hacer más fácil la tarea, y tener un
         punto de partida, aquí podrás ver ejemplos.
         <br />
         <br />
-        Cada vez que pulses el botón de abajo se generará una lista de
+        Cada vez que pulses el botón de abajo se autogenerará una lista de
         actividades con un resultado. Las actividades se ordenarán
         aleatoriamente en cualquiera de los dos lados, puede que sin ningún
-        sentido o lógica. Solo sirve para darte ideas, o si no sabes como
-        empezar y te sientes encallado. No pretende acertar o predecir nada.
+        sentido o lógica. Solo sirve para darte ideas por si no sabes como
+        empezar o te sientes encallado. No pretende acertar o predecir nada.
       </p>
       <SubmitButton
         type="button"

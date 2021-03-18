@@ -24,18 +24,13 @@ const LabelEffect = styled(InputLabel)`
 
   &.positivo {
     margin-right: 13px;
-    border-radius: 10px 0px 0px 10px;
-  }
-
-  &.negativo {
-    border-radius: 0px 10px 10px 0px;
   }
 `;
 
 const LabelIntensity = styled(InputLabel)`
   width: 40px;
   height: 46px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 49px;
 `;
 

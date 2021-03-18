@@ -20,10 +20,6 @@ const Stats = styled.section`
       padding-right: 1rem;
     }
   }
-
-  & span {
-    color: ${({ theme }) => theme.whitecolor};
-  }
 `;
 
 export default Stats;

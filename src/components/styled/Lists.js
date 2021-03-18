@@ -31,20 +31,18 @@ const ListItem = styled.li`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: ${({ effect, theme }) =>
+    effect === false ? theme.redcolor : theme.greencolor};
   }
 
   & p {
-    text-transform: capitalize;
     text-align: left;
     overflow: hidden;
-    color: ${({ effect, theme }) =>
-    effect === false ? theme.redcolor : theme.greencolor};
   }
 
   & span {
     padding-left: 1rem;
     margin-right: 30px;
-    color: ${({ theme }) => theme.whitecolor};
   }
 `;
 

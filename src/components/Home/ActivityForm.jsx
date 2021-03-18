@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 
 import styled from "styled-components";
 import { generate as id } from "shortid";
@@ -22,6 +22,19 @@ const ActivityForm = () => {
   const [intensity, setIntensity] = useState(1);
   const [error, setError] = useState("");
   const [activities, setActivities] = useContext(ActivityContext);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("list") === null) {
+      sessionStorage.setItem("list", JSON.stringify([]));
+    } else {
+      let saveList = JSON.parse(sessionStorage.getItem("list"));
+      setActivities(saveList);
+    }
+  }, [setActivities]);
+
+  useEffect(() => {
+    sessionStorage.setItem("list", JSON.stringify(activities));
+  }, [activities]);
 
   const handleName = e => {
     setName(e.target.value);

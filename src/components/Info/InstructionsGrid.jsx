@@ -11,6 +11,7 @@ import Title from "../styled/Title";
 import { LabelEffect } from "../styled/Labels";
 import { LabelIntensity } from "../styled/Labels";
 import { InfoButton } from "../styled/Buttons";
+import { ListItem } from "../styled/Lists";
 import { Result } from "../styled/Result";
 
 const InfoGrid = styled.div`
@@ -27,8 +28,24 @@ const InfoGrid = styled.div`
     box-sizing: border-box;
     width: 350px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
     padding: 0 3rem;
+  }
+
+  & article:nth-child(4) {
+    margin-bottom: 40px;
+  }
+`;
+
+const DeleteItem = styled(ListItem)`
+  box-sizing: border-box;
+
+  & div {
+    color: ${({ theme }) => theme.whitecolor};
+  }
+
+  &:hover {
+    border: 1px solid ${({ theme }) => theme.whitecolor};
   }
 `;
 
@@ -82,11 +99,23 @@ const InstrutionsGrid = () => {
       </article>
       <article className="button">
         <InfoButton type="submit" value="Añadir" />
-        <p>Pulsa para añadir a la lista la actividad.</p>
+        <p>Pulsa añadir para enviarlo a la lista.</p>
+      </article>
+      <article className="button">
+        <DeleteItem>
+          <button type="button">-</button>
+          <div>
+            <p>Actividad</p>
+            <span>5</span>
+          </div>
+        </DeleteItem>
+        <p>
+          Pon el cursor sobre el elemento de la lista que quieras eliminar y
+          pulsa el botón - .
+        </p>
       </article>
       <article>
         <Result>
-          <h3>Alegría</h3>
           <span>50%</span>
         </Result>
         <p>
